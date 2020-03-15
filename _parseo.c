@@ -20,8 +20,8 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 				if (format[i + 1] == ops[j].op[0])
 				{
 					r = ops[j].f(ap);
-					if (r == -1)
-						return (-1);
+					if (r == 0)
+						return (0);
 					print += r;
 					break;
 				}
@@ -35,7 +35,7 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					print = print + 2;
 				}
 				else
-					return (-1);
+					return (0);
 			}
 			i = i + 1;
 		}
