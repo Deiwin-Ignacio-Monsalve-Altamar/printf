@@ -15,12 +15,11 @@ int _printf(const char *format, ...)
 
 	va_list ap;
 
-	if (format == NULL)
-		return (-1);
+	if (format != NULL)
+	{
 	va_start(ap, format);
 	print = _parseo(format, ops, ap);
 	va_end(ap);
-
+	}
 	return (print);
-
 }
