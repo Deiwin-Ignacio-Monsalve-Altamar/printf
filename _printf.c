@@ -7,18 +7,18 @@
 int _printf(const char *format, ...)
 {
 	op_t ops[] = {
-		{"c", print_char},
-		{"s", pritn_string},
-		{"%", print_mod},
+		{"c", _print_char},
+		{"s", print_string},
+		{"%", print_percent},
 		{NULL, NULL}};
-	int i, j, r, print = 0;
+	int print = 0;
 
 	va_list ap;
 
 	if (format == NULL)
 		return (-1);
 	va_start(ap, format);
-	_parseo = (format, ops, ap);
+	print = _parseo(format, ops, ap);
 	va_end(ap);
 
 	return (print);

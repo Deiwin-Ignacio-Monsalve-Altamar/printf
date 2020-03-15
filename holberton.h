@@ -13,10 +13,12 @@
 typedef struct op
 {
 	char *op;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } op_t;
 int _printf(const char *format, ...);
-int print_char(va_list list);
-int print_string(va_list list);
-int print_percent(__attribute__((unused))va_list list);
+int print_char(char);
+int _print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
