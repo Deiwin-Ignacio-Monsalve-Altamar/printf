@@ -11,18 +11,15 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 {
 	int i, j, r, print = 0;
 
-	if (format == NULL)
-		return (-1);
-	va_start(ap, format);
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
 			for (j = 0; ops[j].op; j++)
 			{
-				if (format[i + 1] == ops[j].op)
+				if (format[i + 1] == ops[j].op[0])
 				{
-					r = ops[j].f(va_list ap);
+					r = ops[j].f(ap);
 					if (r == -1)
 						return (-1);
 					print += r;
