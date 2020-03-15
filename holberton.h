@@ -16,4 +16,5 @@ typedef struct op
 	void (*f)(va_list);
 } op_t;
 int _printf(const char *format, ...);
+int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
