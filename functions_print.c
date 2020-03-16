@@ -41,6 +41,7 @@ int print_percent(__attribute__((unused))va_list ap)
 	print_char('%');
 	return (1);
 }
+int print_n(int n);
 /**
  * print_decimal - Print percent symbol
  * @ap: argumnt
@@ -48,8 +49,13 @@ int print_percent(__attribute__((unused))va_list ap)
  */
 int print_decimal(va_list ap)
 {
-	print_char(va_arg(ap, unsigned int));
-	return (1);
+	int n = va_arg(ap, int);
+
+	int len;
+
+	len = print_n(n);
+
+	return (len);
 }
 /**
  * print_integer - Print integer
@@ -58,6 +64,39 @@ int print_decimal(va_list ap)
  */
 int print_integer(va_list ap)
 {
-	print_char(va_arg(ap, int));
-	return (1);
+	int n = va_arg(ap, int);
+
+	int len;
+
+	len = print_n(n);
+
+	return (len);
 }
+/**
+ * print_n - Print integer
+ * @n: argumnt
+ * Return: int characters
+ */
+int print_n(int n)
+{
+	int j = 0;
+	int  i = 0;
+
+	if (n < 0)
+	{
+		i = -1 * n;
+		print_char('-');
+	}
+	else
+	{
+		i = n;
+	}
+	if (i / 10)
+	{
+		j++;
+		print_n(i / 10);
+	}
+	print_char('0' + i % 10);
+	return (j);
+}
+
