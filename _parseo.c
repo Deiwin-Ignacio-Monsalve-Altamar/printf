@@ -25,6 +25,7 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					print += r;
 					break;
 				}
+			}
 
 				if (ops[j].op == NULL && format[i + 1] != ' ')
 				{
@@ -37,7 +38,7 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					else
 						return (-1);
 				}
-			}
+
 			i = i + 1;
 		}
 		else
