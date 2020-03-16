@@ -21,7 +21,6 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	print = _parseo(format, ops, ap);
 	va_end(ap);
-
+	}
 	return (print);
-
 }
