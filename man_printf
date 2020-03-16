@@ -1,0 +1,14 @@
+.TH man 2 "16 March 2020" "0.32"  "printf man page"
+.SH NAME
+- _printf function, The printf function returns the number of characters printed.
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+The printf function returns the number of characters printed, or a negative 
+value if an error occurs.
+.SH SEE ALSO
+.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+.SH BUGS
+No Known bugs.
+.SH AUTHOR
+Deiwin Monsalve and Samuel Martinez
