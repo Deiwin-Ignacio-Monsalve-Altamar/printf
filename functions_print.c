@@ -52,7 +52,7 @@ int print_decimal(va_list ap)
 
 	p = va_arg(ap, int);
 
-	print_number(p);
+	print_n(p);
 	if (p < 10)
 	{
 		return (contador);
@@ -78,7 +78,7 @@ int print_integer(va_list ap)
 
 	p = va_arg(ap, int);
 
-	print_number(p);
+	print_n(p);
 	if (p < 10)
 	{
 		return (contador);
