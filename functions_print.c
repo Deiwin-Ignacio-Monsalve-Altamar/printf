@@ -80,7 +80,7 @@ int print_integer(va_list ap)
 int print_n(int n)
 {
 	int j = 0;
-	int  i = 0;
+	unsigned  int  i = 0;
 
 	if (n < 0)
 	{
@@ -88,9 +88,7 @@ int print_n(int n)
 		print_char('-');
 	}
 	else
-	{
 		i = n;
-	}
 	if (i / 10)
 	{
 		j++;
