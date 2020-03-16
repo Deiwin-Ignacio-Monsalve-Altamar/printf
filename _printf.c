@@ -14,11 +14,13 @@ int _printf(const char *format, ...)
 	int print = 0;
 
 	va_list ap;
-	if (format != NULL)
+
+	if (format == NULL)
 	{
+		return (-1);
+	}
 	va_start(ap, format);
 	print = _parseo(format, ops, ap);
 	va_end(ap);
-	}
 	return (print);
 }
