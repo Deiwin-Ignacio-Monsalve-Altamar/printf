@@ -33,11 +33,31 @@ int print_string(va_list ap)
 /**
  * print_percent - Print percent symbol
  * @ap: argumnt
- * Return: return the amount of characters
+ * Return: percent characters
  */
 
 int print_percent(__attribute__((unused))va_list ap)
 {
 	print_char('%');
+	return (1);
+}
+/**
+ * print_decimal - Print percent symbol
+ * @ap: argumnt
+ * Return: decimal characters
+ */
+int print_decimal(va_list ap)
+{
+	print_char(va_arg(ap, unsigned int));
+	return (1);
+}
+/**
+ * print_int - Print percent symbol
+ * @ap: argumnt
+ * Return: int characters
+ */
+int print_integer(va_list ap)
+{
+	print_char(va_arg(ap, int));
 	return (1);
 }
