@@ -26,17 +26,17 @@ int _parseo(const char *format, op_t ops[], va_list ap)
 					break;
 				}
 
-			if (ops[j].op == NULL && format[i + 1] != ' ')
-			{
-				if (format[i + 1] != '\0')
+				if (ops[j].op == NULL && format[i + 1] != ' ')
 				{
-					print_char(format[i]);
-					print_char(format[i + 2]);
-					print = print + 2;
+					if (format[i + 1] != '\0')
+					{
+						print_char(format[i]);
+						print_char(format[i + 2]);
+						print = print + 2;
+					}
+					else
+						return (-1);
 				}
-				else
-					return (-1);
-			}
 			}
 			i = i + 1;
 		}
