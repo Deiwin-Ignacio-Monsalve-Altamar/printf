@@ -48,7 +48,8 @@ int print_percent(__attribute__((unused))va_list ap)
  */
 int print_decimal(va_list ap)
 {
-	int p, contador = 1;
+	int p;
+	unsigned int contador = 1;
 
 	p = va_arg(ap, int);
 
