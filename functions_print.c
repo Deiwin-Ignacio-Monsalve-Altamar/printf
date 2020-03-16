@@ -52,7 +52,7 @@ int print_decimal(va_list ap)
 	return (1);
 }
 /**
- * print_int - Print percent symbol
+ * print_integer - Print integer
  * @ap: argumnt
  * Return: int characters
  */
