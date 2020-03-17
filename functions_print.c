@@ -48,25 +48,13 @@ int print_percent(__attribute__((unused))va_list ap)
  */
 int print_decimal(va_list ap)
 {
-	int p;
-	unsigned int contador = 1;
+	int p = 0, contador = 0;
 
 	p = va_arg(ap, int);
+	contador += print_n(p);
 
-	print_n(p);
-	if (p < 10)
-	{
-		return (contador);
-	}
-	else
-	{
-		while (p / 10 > 0)
-		{
-			p = p / 10;
-			contador++;
-		}
-	}
 	return (contador);
+
 }
 /**
  * print_integer - Print integer
@@ -75,14 +63,10 @@ int print_decimal(va_list ap)
  */
 int print_integer(va_list ap)
 {
-	int p, contador = 0;
+	int p = 0;
 
-	p = va_arg(ap, int);
-	print_n(p);
+	p += print_n(va_arg(ap, int));
 
-	while (contador < p)
-		contador++;
-
-	return (contador);
+	return (p);
 }
 
