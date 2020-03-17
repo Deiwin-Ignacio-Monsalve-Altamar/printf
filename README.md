@@ -2,9 +2,11 @@
 
 # _printf
 
-## This is the printf function that formats and prints data
+## Synopsis
+This is the printf function that formats and prints data
 
-## The _printf function returns the number of characters printed, or a negative
+## Description
+The _printf function returns the number of characters printed, or a negative
 
 <!-- UL -->
 The available convertion specifiers are:
@@ -17,7 +19,7 @@ The available convertion specifiers are:
 * %u: Prints unsigned integers
 * %x: Prints the hexadecial representation of an unsigned decimal in lowercase
 letters
-* %X:Prints the hexadecial representation of an unsigned decimal in uppercase 
+* %X:Prints the hexadecial representation of an unsigned decimal in uppercase
 letters
 * %r: Prints a reversed string
 * %R: Prints the Rot13 interpretation of a string
@@ -27,10 +29,10 @@ letters
 ## Usage
 
 * include the "holberton.h" header file on the functions using the _printf
-* Compile your code with
-<!-- Code Blocks -->
-'''bash
-gcc -Wall -Werror -Wextra -pedantic *.c
+* Compile your code with:
+
+<!-- Blockquote -->
+> gcc -Wall -Werror -Wextra -pedantic *.c
 
 
 <!-- Headings -->
