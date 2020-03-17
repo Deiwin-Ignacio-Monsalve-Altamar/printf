@@ -1,6 +1,6 @@
 .TH man 3 "16 March 2020" "0.01"  "_printf man page"
 .SH NAME
-- _printf function, The printf function returns the number of characters
+- _printf - format and print data
 printed.
 .SH SYNOPSIS
 _printf FORMAT [ARGUMENT]...
