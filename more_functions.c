@@ -7,7 +7,7 @@
 int binary(va_list ap)
 {
 	unsigned int number;
-	int i, j, contador = 0;
+	int i, j, contador = 1;
 	char *s;
 
 	number = va_arg(ap, unsigned int);
@@ -21,5 +21,5 @@ int binary(va_list ap)
 	for (j = i - 1; j >= 0; j--)
 		print_char('0' + s[j]);
 	free(s);
-	return (contador);
+	return (+1);
 }
