@@ -8,16 +8,13 @@ int binary(va_list ap)
 {
 	unsigned int number;
 	int i, j, contador = 0;
-	char *s;
+	char s[1000];
 
 	number = va_arg(ap, unsigned int);
 	if (number == 0)
 	{
-		print_char('0' + 0);
+		print_char(48);
 	}
-	s = malloc(sizeof(int) * 1000);
-	if (s == NULL)
-		return (0);
 	for (i = 0; number > 0; i++)
 	{
 		s[i] = number % 2;
@@ -26,6 +23,5 @@ int binary(va_list ap)
 	}
 	for (j = i - 1; j >= 0; j--)
 		print_char('0' + s[j]);
-	free(s);
 	return (contador + 1);
 }
