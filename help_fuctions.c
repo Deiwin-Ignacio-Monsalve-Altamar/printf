@@ -5,38 +5,34 @@
 *
 * Return: void
 */
-
-void print_n(int n)
+int print_n(int n)
 {
-	int i, size;
-	unsigned int num, num_temp, dig, div;
+	int aux, i, len, m;
 
-	num = n;
-	size = 0;
-	div = 1;
+	aux = 0;
+	i = 0;
+	len = 0;
+	m = 0;
+
+	if (n == INT_MIN)
+	{
+		n = n + 1;
+		aux = 1;
+	}
 
 	if (n < 0)
 	{
-		num = num * -1;
-		print_char(45);
+		n = -n;
+		print_char('-');
+		i++;
 	}
 
-	num_temp = num;
-	while (num_temp != 0)
-	{
-		size++;
-		num_temp /= 10;
-
-	}
-	for  (i = 1; i < size; i++)
-	{
-		div = div * 10;
-	}
-	for (i = size - 1; i >= 1; i--)
-	{
-		dig = num / div;
-		print_char((dig % 10) + '0');
-		div /= 10;
-	}
-	print_char((num % 10) + '0');
+	if (n / 10 != 0)
+		len = (m + print_n(n / 10));
+	if (aux == 1)
+		print_char('8');
+	else
+		print_char(n % 10 + '0');
+	i++;
+	return (i + len);
 }
