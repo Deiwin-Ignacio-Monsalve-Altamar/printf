@@ -21,3 +21,17 @@ letters
 letters
 * %r: Prints a reversed string
 * %R: Prints the Rot13 interpretation of a string
+
+<!-- Headings -->
+
+## Usage
+
+* include the "holberton.h" header file on the functions using the _printf
+* Compile your code with
+<!-- Code Blocks -->
+'''bash
+gcc -Wall -Werror -Wextra -pedantic *.c
+
+
+<!-- Headings -->
+## Example
