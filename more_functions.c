@@ -15,20 +15,17 @@ int binary(va_list ap)
 	{
 		print_char('0' + 0);
 	}
-	else
+	s = malloc(sizeof(int) * 1000);
+	if (s == NULL)
+		return (0);
+	for (i = 0; number > 0; i++)
 	{
-		s = malloc(sizeof(int) * number + 1);
-		if (s == NULL)
-			return (0);
-		for (i = 0; number > 0; i++)
-		{
-			s[i] = number % 2;
-			number = number / 2;
-			contador++;
-		}
-		for (j = i - 1; j >= 0; j--)
-			print_char('0' + s[j]);
-		free(s);
+		s[i] = number % 2;
+		number = number / 2;
+		contador++;
 	}
+	for (j = i - 1; j >= 0; j--)
+		print_char('0' + s[j]);
+	free(s);
 	return (contador + 1);
 }
