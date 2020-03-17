@@ -4,22 +4,36 @@
  * @ap: arguments
  * Return: return int of characters
  */
-int binary(va_list ap)
+unsigned int _binary(unsigned int number)
 {
-	unsigned int number;
-	int i, j, contador = 1;
+	int i, j, x = 0;
+	unsigned int contador;
 	char *s;
 
-	number = va_arg(ap, unsigned int);
-	s = malloc(sizeof(int) * 1000);
+	s = malloc(sizeof(int) * number + 1);
+	if (s == NULL)
+		return (0);
 	for (i = 0; number > 0; i++)
 	{
 		s[i] = number % 2;
 		number = number / 2;
-		contador++;
+		contador = s[i];
 	}
 	for (j = i - 1; j >= 0; j--)
 		print_char('0' + s[j]);
+	x++;
 	free(s);
-	return (+1);
+	return (contador + x);
+}
+/**
+ * binary - Prints character
+ * @ap: arguments
+ * Return: return int of characters
+ */
+int binary(va_list ap)
+{
+	int number;
+	number = _binary(va_arg(ap, unsigned int));
+
+	return (number);
 }
