@@ -75,23 +75,14 @@ int print_decimal(va_list ap)
  */
 int print_integer(va_list ap)
 {
-	int p, contador = 1;
+	int p, contador = 0;
 
 	p = va_arg(ap, int);
-
 	print_n(p);
-	if (p < 10)
-	{
-		return (contador);
-	}
-	else
-	{
-		while (p / 10 > 0)
-		{
-			p = p / 10;
-			contador++;
-		}
-	}
+
+	while (contador < p)
+		contador++;
+
 	return (contador);
 }
 
