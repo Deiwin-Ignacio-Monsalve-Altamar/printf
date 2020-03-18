@@ -36,25 +36,3 @@ int print_n(int n)
 	i++;
 	return (i + len);
 }
-/**
-* _binary - prints an integer char by char
-* @n: The integer to print
-*
-* Return: integer 
-*/
-
-int _binaryi(int n)
-{
-        unsigned int bin = 0;
-        int rem, i = 1, j = 0;
-        while (n != 0)
-        {
-                rem = n % 2;
-		print_char(rem + '0');
-                n /= 2;
-                bin += rem * i;
-                i *= 10;
-		j++;
-        }
-	return (j);
-}
