@@ -36,3 +36,35 @@ int print_n(int n)
 	i++;
 	return (i + len);
 }
+/**
+* binary - prints an integer char by char
+* @ap: The integer to print
+*
+* Return: int
+*/
+int binary(va_list ap)
+{
+	unsigned int b = va_arg(ap, unsigned int);
+
+	int i = 0, j;
+	char p[1000] = {'\0'};
+
+	if (b == 0)
+	{
+		print_char('0');
+		return (1);
+	}
+	while (b > 0)
+	{
+		p[i] = b % 2;
+		b /= 2;
+		i++;
+	}
+	j = i - 1;
+	while (j >= 0)
+	{
+		print_char(p[j] + '0');
+		j--;
+	}
+	return (i);
+}
