@@ -47,7 +47,7 @@ int rot13(va_list ap)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if ((s[i] >= 'A' && s[i] >= 'Z') && (s[i] >= 'a' && s[i] <= 'z'))
+		if ((s[i] >= 'A' && s[i] <= 'Z') && (s[i] >= 'a' && s[i] <= 'z'))
 		{
 			aux = 13 + s[i];
 			if ((aux > 'Z' && s[i] <= 'Z') || aux > 'z')
