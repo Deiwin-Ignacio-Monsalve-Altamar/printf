@@ -6,12 +6,12 @@
  */
 int p_rev(va_list valist)
 {
-	int i, j count = 0;
+	int i, j, count = 0;
 	char *s;
 
 	s = va_arg(alist, char *);
 
-	j = 0;
+	i = 0;
 	j = 0;
 
 	if (s == '\0')
@@ -32,10 +32,10 @@ int p_rev(va_list valist)
 
 /**
  * p_rot13 - Prints character
- * @valist: arguments
+ * @ap: arguments
  * Return: return the amount of characters
  */
-int p_rot13(va_list valist)
+int p_rot13(va_list ap)
 {
 	int i, aux;
 	char *s;
@@ -45,21 +45,20 @@ int p_rot13(va_list valist)
 	i = 0;
 	aux = 0;
 
-	for (i = 0; s[i] != '\0'; i++;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if ((s[i] >= 'A' && s[i] >= 'a' && s[i] <= 'z'))
 		{
-			if ((s[i] >= 'A' && s[i] >= 'a' && s[i] <= 'z'))
+			aux = 13 + s[i];
+			if ((aux > 'Z' && s[i] <= 'Z') || aux > 'z')
 			{
-				aux = 13 + s[i];
-				if ((aux > 'Z' && s[i] <= 'Z')
-					{
-						aux = aux % (90 + (32 * (97 / s[i])));
-						aux = aux + (65 + (32 * (97 / s[i]))) - 1;
-					}
-					_print_char(aux);
+				aux = aux % (90 + (32 * (97 / s[i])));
+				aux = aux + (65 + (32 * (97 / s[i]))) - 1;
 			}
-				else
-				{
-					_print_char
-						}
-			}
-		}			return (-1)
+			_print_char(aux);
+		}
+		else
+			_print_char(s[i]);
+	}
+	return (i);
+}

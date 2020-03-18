@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 		{"d", print_decimal},
 		{"i", print_integer},
 		{"b", binary},
+		{"r", p_rev},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 	int print = 0;
