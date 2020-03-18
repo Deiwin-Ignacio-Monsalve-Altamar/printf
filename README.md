@@ -31,9 +31,27 @@ letters
 * include the "holberton.h" header file on the functions using the _printf
 * Compile your code with:
 
-<!-- Blockquote -->
-> gcc -Wall -Werror -Wextra -pedantic *.c
+```
+  gcc -Wall -Werror -Wextra -pedantic *.c
 
+```
 
 <!-- Headings -->
 ## Example
+
+```
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+
+int main()
+{
+	int testInteger = 5;
+    	printf("Number = %d", testInteger);   /*Number = 5*/
+    	return (0);
+}
+```
