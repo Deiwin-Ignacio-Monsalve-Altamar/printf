@@ -12,8 +12,6 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"d", print_decimal},
 		{"i", print_integer},
-		{"b", binary},
-		{"R", rot13}
 		{NULL, NULL}
 	};
 	int print = 0;
