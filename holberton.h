@@ -26,4 +26,5 @@ int print_decimal(va_list ap);
 int print_integer(va_list ap);
 int binary(va_list ap);
 int rot13(va_list ap);
+int binary(va_list ap);
 #endif
