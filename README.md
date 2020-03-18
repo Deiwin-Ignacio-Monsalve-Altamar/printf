@@ -51,7 +51,7 @@ letters
 int main()
 {
 	int testInteger = 5;
-    	printf("Number = %d", testInteger);   /*Number = 5*/
+    	printf("Number = %d", testInteger);   /*expected: Number = 5*/
     	return (0);
 }
 ```
