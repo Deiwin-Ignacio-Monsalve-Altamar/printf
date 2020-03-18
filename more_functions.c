@@ -4,17 +4,17 @@
  * @valist: s
  * Return: return the amount of characters
  */
-int p_rev(va_list valist)
+int p_rev(va_list ap)
 {
 	int i, j, count = 0;
 	char *s;
 
-	s = va_arg(alist, char *);
+	s = va_arg(ap, char *);
 
 	i = 0;
 	j = 0;
 
-	if (s == '\0')
+	if (s == NULL)
 	{
 		s = "(null)";
 	}
@@ -24,7 +24,7 @@ int p_rev(va_list valist)
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		_print_char(s[j]);
+		print_char(s[j]);
 		count++;
 	}
 	return (count);
@@ -35,12 +35,12 @@ int p_rev(va_list valist)
  * @ap: arguments
  * Return: return the amount of characters
  */
-int p_rot13(va_list ap)
+int rot13(va_list ap)
 {
 	int i, aux;
 	char *s;
 
-	s = va_arg(valist, char *);
+	s = va_arg(ap, char *);
 
 	i = 0;
 	aux = 0;
@@ -55,10 +55,10 @@ int p_rot13(va_list ap)
 				aux = aux % (90 + (32 * (97 / s[i])));
 				aux = aux + (65 + (32 * (97 / s[i]))) - 1;
 			}
-			_print_char(aux);
+			print_char(aux);
 		}
 		else
-			_print_char(s[i]);
+			print_char(s[i]);
 	}
 	return (i);
 }
